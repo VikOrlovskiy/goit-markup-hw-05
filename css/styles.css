@@ -561,15 +561,14 @@ img {
 
   position: absolute;
   top: 0px;
-  left: 0px;
   width: 100%;
   height: 100%;
 
   opacity: 0;
 }
-.portfolio-card {
+/* .portfolio-card {
   position: relative;
-}
+} */
 /* картки оформлення */
 .item .portfolio-card:hover,
 .item .portfolio-card:focus {
