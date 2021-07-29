@@ -548,8 +548,27 @@ img {
 
   opacity: 0;
 }
-.item .portfolio-card:hover :before {
+.portfolio-card:hover :before,
+.portfolio-card:hover .overlay-text {
   opacity: 1;
+}
+.overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--title-wite);
+  display: inline-block;
+  padding: 24px 63px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+}
+.portfolio-card {
+  position: relative;
 }
 /* картки оформлення */
 .item .portfolio-card:hover,
