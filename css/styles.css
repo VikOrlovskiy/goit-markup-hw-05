@@ -265,16 +265,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-.pic-list-thumb::before {
-  content: "";
-
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 25%;
-  background-color: rgba(47, 48, 58, 0.8);
-}
 .pic-list-text {
   color: var(--title-wite);
   font-weight: 700;
@@ -283,11 +273,13 @@ img {
   text-transform: uppercase;
   text-align: center;
   position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
 
   padding: 27px 0;
   left: 0px;
   bottom: 0px;
   width: 100%;
+  height: 25%;
 }
 /* Чем ми занимаемся позиционирование */
 
