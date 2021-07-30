@@ -27,7 +27,7 @@
         <a class="logo" href="#"><span class="logo-blue">Web</span>Studio</a>
         <nav>
           <ul class="site-nav list">
-            <li class="site-nav-link">
+            <li class="site-nav-link page">
               <a class="link" href="index.html">Студия</a>
             </li>
             <li class="site-nav-link">
@@ -70,7 +70,9 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="heroes-button" type="button">Заказать услугу</button>
+        <button class="heroes-button" data-modal-open type="button">
+          Заказать услугу
+        </button>
       </section>
       <!-- features -->
       <section class="section">
@@ -527,6 +529,11 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>
