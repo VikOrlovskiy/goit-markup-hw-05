@@ -22,7 +22,7 @@
   --secondary-bgc: #f5f4fa;
   --title-color: #212121;
   --acent-color: #2196f3;
-  --title-wite: #ffffff;
+  --title-white: #ffffff;
   --button-bgc: #f5f4fa;
   --footer-bgc: #2f303a;
   --heroes-bgc: #c4c4c4;
@@ -51,9 +51,10 @@ ul {
   padding: 0px;
   margin: 0px;
 }
-/* скрить заголовки где ненужни */
-.section-title.dont-show {
-  display: none;
+/* hide element*/
+.hidden {
+  visibility: hidden;
+  font-size: 0;
 }
 img {
   display: block;
@@ -63,15 +64,12 @@ img {
 /* упаковка контейнер */
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 /* загальне вимога по ТЗ */
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding: 94px 0;
 }
 /* прибрати маркера списків сторінки */
 .list {
@@ -108,8 +106,7 @@ img {
   color: var(--title-color);
   text-decoration: none;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
   display: block;
 
   transition: color 250ms var(--animation);
@@ -136,6 +133,9 @@ img {
   color: var(--primary-text-color);
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   transition: color 250ms var(--animation);
 }
@@ -187,10 +187,9 @@ img {
   background-color: var(--heroes-bgc);
   text-align: center;
   padding: 200px 0;
+  margin: 0 auto;
   max-width: 1600px;
   min-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -201,7 +200,7 @@ img {
   background-position: center;
 }
 .heroes-title {
-  color: var(--title-wite);
+  color: var(--title-white);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -212,7 +211,7 @@ img {
   margin-bottom: 30px;
 }
 .heroes .heroes-button {
-  color: var(--title-wite);
+  color: var(--title-white);
   background-color: var(--acent-color);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -236,7 +235,7 @@ img {
 .heroes .heroes-button:focus,
 .heroes .heroes-button:hover {
   color: var(--acent-color);
-  background-color: var(--title-wite);
+  background-color: var(--primary-bgc);
 }
 /* оформлення основи */
 .section-title {
@@ -269,7 +268,7 @@ img {
   flex-wrap: wrap;
 }
 .text-set .text-set-card:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .icon-thumb {
@@ -291,20 +290,19 @@ img {
   position: relative;
 }
 .pic-list-text {
-  color: var(--title-wite);
+  color: var(--title-white);
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.17;
   text-transform: uppercase;
   text-align: center;
   position: absolute;
   background-color: rgba(47, 48, 58, 0.8);
 
   padding: 27px 0;
-  left: 0px;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 25%;
 }
 /* Чем ми занимаемся позиционирование */
 
@@ -315,7 +313,7 @@ img {
 }
 /* Наша команда позиционирование */
 .section.background-color {
-  padding-top: 0px;
+  padding-top: 0;
   background-color: var(--secondary-bgc);
 }
 .have-padding {
@@ -332,15 +330,16 @@ img {
   background-color: var(--primary-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 0 0 4px 4px;
 }
 .team.list .team-specialist:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 /* Наша команда оформление */
 
 .subtitle {
+  color: var(--title-color);
   line-height: 1.16;
   font-size: 36px;
   font-weight: 700;
@@ -358,6 +357,7 @@ img {
   font-size: 16px;
   line-height: 1.18;
   text-transform: uppercase;
+  padding-top: 30px;
 }
 .team .text {
   color: var(--primary-text-color);
@@ -368,18 +368,17 @@ img {
   padding-top: 10px;
 }
 .card-text-specialist {
-  padding-top: 30px;
-  padding-bottom: 16px;
+  padding-top: 30px 16px 0 0;
 }
 /* социоальние иконки спецов */
 .specialist-icon {
   fill: currentColor;
+
+  transition: fill 250ms var(--animation);
 }
 .social-specialist-item {
   color: var(--icon-social-color);
   margin-right: 10px;
-
-  transition: color 250ms var(--animation);
 }
 .social-specialist-item:last-child {
   margin-right: 0px;
@@ -392,21 +391,21 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--title-wite);
 
-  transition: color 250ms var(--animation);
+  transition: background-color 250ms var(--animation);
 }
 .social-thumb:hover,
 .social-thumb:focus {
   background-color: var(--acent-color);
 }
 .social-thumb:hover .specialist-icon {
-  fill: var(--title-wite);
+  fill: var(--title-white);
 }
 
 .social-specialist {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-bottom: 30px;
 }
 .social-specialist-item {
@@ -421,8 +420,7 @@ img {
   display: flex;
 }
 .client-link {
-  width: 170px;
-  height: 92px;
+  padding: 16px 32px;
   border-radius: 4px;
   border: 1px solid var(--icon-social-color);
   color: var(--icon-social-color);
@@ -455,7 +453,7 @@ img {
 }
 .below-logo,
 .location {
-  color: var(--title-wite);
+  color: var(--title-white);
 }
 .below-logo .logo-blue {
   color: var(--acent-color);
@@ -470,7 +468,7 @@ img {
   display: inline-block;
 }
 .location {
-  color: var(--title-wite);
+  color: var(--title-white);
   line-height: 1.7;
   font-style: normal;
   text-decoration: none;
@@ -501,7 +499,7 @@ img {
   margin-left: 70px;
 }
 .add {
-  color: var(--title-wite);
+  color: var(--title-white);
   font-weight: 700;
   font-size: 14px;
   line-height: 0.87;
@@ -516,7 +514,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--title-wite);
+  color: var(--title-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -544,7 +542,7 @@ img {
   margin-left: 8px;
 }
 .filter .filter-element:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 /* фильтр оформление */
 .filter .filter-button {
@@ -568,7 +566,7 @@ img {
 .filter .filter-button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--title-wite);
+  color: var(--title-white);
   background-color: var(--acent-color);
 }
 
@@ -582,8 +580,8 @@ img {
   content: "";
 
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
@@ -599,7 +597,7 @@ img {
 .overlay-text {
   font-size: 18px;
   line-height: 1.56;
-  color: var(--title-wite);
+  color: var(--title-white);
   padding: 63px 24px;
 }
 
@@ -651,8 +649,8 @@ img {
 
 .backdrop {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
 
   width: 100%;
   height: 100%;
@@ -679,13 +677,12 @@ img {
 }
 .close {
   position: absolute;
-  right: 0px;
-  top: 0px;
-  margin-top: 8px;
-  margin-right: 8px;
+  right: 0;
+  top: 0;
+  margin: 8px 8px;
   cursor: pointer;
 
-  background-color: #fff;
+  background-color: var(--primary-bgc);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
